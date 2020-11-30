@@ -41,24 +41,10 @@ class instaBot:
 			self.bot.find_element_by_class_name('wpO6b').click() # Like
 			time.sleep(3)
 
-	def comment(self):
-		comments = open("comments.txt", "r")
-		self.bot.get('https://www.instagram.com/explore/tags/memes/')
-		time.sleep(5)
-		self.bot.find_element_by_class_name('v1Nh3').click() # First post after searching hash
-		time.sleep(3)
-		for i in range(5):
-			for comment in comments:
-				pass
-			
-
-
-
 def startBot():
 	insta = instaBot('rajeshv_alluri', '84676211a')
 	insta.openInsta()
 	insta.login()
 	insta.hash()
-	#insta.comment()
 
 startBot()
